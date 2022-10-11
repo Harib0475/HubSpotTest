@@ -58,7 +58,7 @@ class HubSpot:
                         time.mktime(time.strptime(os.getenv('DATETIME'), '%Y-%m-%d %H:%M:%S.%f')))
                     curr_datetime = datetime.datetime.now()
                     diff = curr_datetime - prev_datetime
-                    if diff.seconds >= 10:
+                    if diff.seconds >= 1500:
                         try:
                             data = {'grant_type': 'refresh_token', 'client_id': 'eb890419-5660-4b46-9cf7-6457a8ad28b6',
                                     'client_secret': '7f5db265-c6fb-45d2-9cbb-8776470950b2',
